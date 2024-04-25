@@ -1,4 +1,13 @@
-# 0.1.0 (2024-04-25)
+## [0.1.1](https://github.com/reneduesmann/RD.TMDB/compare/v0.1.0...v0.1.1) (2024-04-25)
+
+
+### Bug Fixes
+
+* Added nuget deployment to nuget.org ([644ad33](https://github.com/reneduesmann/RD.TMDB/commit/644ad33b5b351cf7e95349343f8f4c81e2d16b13))
+
+
+
+# [0.1.0](https://github.com/reneduesmann/RD.TMDB/compare/03b26707a5c4df69d14d37f08f8f08739aeac717...v0.1.0) (2024-04-25)
 
 
 ### Bug Fixes
