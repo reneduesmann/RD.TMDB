@@ -36,8 +36,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\RD.TMDB.Domain\RD.TMDB.Domain.csproj" />
+		<ProjectReference Include="..\RD.TMDB.Domain\RD.TMDB.Domain.csproj">
+			<PrivateAssets>all</PrivateAssets>
+		</ProjectReference>
 	</ItemGroup>
+
+	<PropertyGroup>
+		<TargetsForTfmSpecificBuildOutput> $(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
+
+	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+		<ItemGroup>
+			<_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')->WithMetadataValue('PrivateAssets', 'All'))"/>
+		</ItemGroup>
+
+		<ItemGroup>
+			<BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)"/>
+		</ItemGroup>
+	</Target>
 
 	<ItemGroup>
 		<Using Include="Refit" />
