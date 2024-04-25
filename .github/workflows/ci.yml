@@ -1,8 +1,8 @@
 name: Build
 
-#on:
-#  push:
-#    branches: [ main ]
+on:
+  push:
+    branches: [ main ]
 
 env:
   DOTNET_CLI_TELEMETRY_OPTOUT: true
