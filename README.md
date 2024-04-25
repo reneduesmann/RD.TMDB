@@ -9,6 +9,7 @@ A complete wrapper for v3 and v4 of the TMDB's API (TheMovieDb - https://www.the
 * [Informations](#Informations)
 * [License](#License)
 * [ToDos](#ToDos)
+* [Work with api categories](#Work-with-api-categories)
 
 ## Examples
 
@@ -80,3 +81,17 @@ RD.TMDB.Client is licensed under the [MIT License](https://github.com/reneduesma
 - [ ] Add Unit Tests
 - [ ] Add examples
 - [ ] Add method documentations
+
+## Work with api categories
+The [TMDB api](https://developer.themoviedb.org/reference/intro/getting-started) is divided into different categories. Each category is represented by an interface. The `TmdbClient` and `TmdbV4Client` classes implement all interfaces.
+The categories are as example Account, Authentication, Movies, TvShows, etc.
+Append to the category name the word `Provider` to get the interface name.
+To get the interfaces, you can define it like this:
+```csharp
+ITmdbClient client = new TmdbClient("Token");
+IMovieProvider movieProvider = client;
+//or
+IMovieProvider movieProvider = new TmdbClient("Token");
+
+MovieDetail movie = await movieProvider.GetMovieDetailsAsync(693134);
+```
