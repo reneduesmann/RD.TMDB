@@ -1,8 +1,9 @@
-﻿using RD.TMDB.Domain.Enums;
+﻿using RD.TMDB.Core.Contracts.V4;
+using RD.TMDB.Domain.Enums;
 
 namespace RD.TMDB.Core;
 
-public interface ITmdbV4Client : IDisposable
+public interface ITmdbV4Client : IDisposable, IAccountProvider, IAuthProvider, IListProvider
 {
     /// <summary>
     /// Default language to use for requests when not in the request specified.
