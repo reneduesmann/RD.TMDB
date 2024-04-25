@@ -39,8 +39,8 @@ jobs:
             name: package
             path: Build/*.nupkg
 
-    #- name: Upload Nuget Package to Nuget
-    #  run: dotnet nuget push Build/*.nupkg --no-symbols --skip-duplicate -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json
+    - name: Upload Nuget Package to Nuget
+      run: dotnet nuget push Build/*.nupkg --no-symbols --skip-duplicate -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json
 
     - name: Upload Nuget Package to Github
       run: dotnet nuget push Build/*.nupkg --skip-duplicate -k ${{ secrets.APIKEY }} -s "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
