@@ -9,12 +9,20 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageId>RD.TMDB.Client</PackageId>
+		<RepositoryUrl>https://github.com/reneduesmann/RD.TMDB</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>TMDB,wrapper,client,themoviedb,movies,tmdb-api</PackageTags>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="..\icon.png">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\LICENSE">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
 		</None>
 		<None Include="..\README.md">
 			<Pack>True</Pack>
