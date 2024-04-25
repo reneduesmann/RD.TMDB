@@ -78,8 +78,7 @@ public sealed partial class TmdbV4Client : ITmdbV4Client
                     new EnumConverter<Iso639_1>(this._enumCache),
                     new EnumConverter<MediaType>(this._enumCache),
                     new KnownForConverter()
-                },
-                    UnmappedMemberHandling = JsonUnmappedMemberHandling.Disallow
+                }
                 })
             };
     }

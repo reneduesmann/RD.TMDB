@@ -8,7 +8,6 @@ using RD.TMDB.Domain.Enums;
 using RD.TMDB.Domain.Models.Configurations;
 using RD.TMDB.Domain.Models.Shared;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using static RD.TMDB.Domain.Configurations.EnumConstant;
 using static RD.TMDB.Domain.Configurations.ErrorMessage;
 
@@ -179,8 +178,7 @@ public sealed partial class TmdbClient : ITmdbClient
                     new DateOnlyConverter(),
                     new GenreListConverter<TvShowGenre>(),
                     new TvShowDetailConverter()
-                },
-                UnmappedMemberHandling = JsonUnmappedMemberHandling.Disallow
+                }
             })
         };
     }
