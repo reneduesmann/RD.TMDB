@@ -1,3 +1,13 @@
+## [0.1.2](https://github.com/reneduesmann/RD.TMDB/compare/v0.1.1...v0.1.2) (2024-04-25)
+
+
+### Bug Fixes
+
+* Added domain as dependency ([a2bbe51](https://github.com/reneduesmann/RD.TMDB/commit/a2bbe514d6eedbe0daa24ef83cc0fb469cd983e4))
+* Added RD.TMDB.Domain to the nuget package ([15f5654](https://github.com/reneduesmann/RD.TMDB/commit/15f565403e6f8b3c3b4c164dc98c455cc04005a7))
+
+
+
 ## [0.1.1](https://github.com/reneduesmann/RD.TMDB/compare/v0.1.0...v0.1.1) (2024-04-25)
 
 
